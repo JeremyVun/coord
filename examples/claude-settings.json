@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "^(Read|Edit|Write|MultiEdit|NotebookEdit|Bash)$",
+        "hooks": [{ "type": "command", "command": "coord hook pre", "timeout": 180 }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Read|Edit|Write|MultiEdit|NotebookEdit|Bash)$",
+        "hooks": [{ "type": "command", "command": "coord hook post" }]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [{ "type": "command", "command": "coord hook start" }]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [{ "type": "command", "command": "coord hook end" }]
+      }
+    ]
+  }
+}

@@ -1,1 +1,12 @@
-coord
+# Build output
+/coord
+*.test
+/coverage.out
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+*.pem
+*.key
+.claude/settings.local.json
+.DS_Store
